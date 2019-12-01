@@ -2,11 +2,10 @@ library(sf); library(ggplot2); library(wesanderson)
 
 
 curbs <- st_read('F:/GIS/curblines/curblines.shp') # https://www.opendataphilly.org/dataset/curb-edges
-curbs <- st_read('C:/Users/Tyler/Downloads/Curbs_No_Cartways/Curbs_No_Cartways.shp')
 
 colPal <- wes_palette('Moonrise3', n = 5) # Make a color palette of 5 colors from Moonrise Kingdom using wesanderson pkg
 preferredProj <- '+proj=lcc +lat_1=39.93333333333333 +lat_2=40.96666666666667 +lat_0=39.33333333333334 +lon_0=-77.75 +x_0=600000 +y_0=0 +datum=NAD83 +units=us-ft +no_defs'
-curbs <- st_transform(curbs, crs = preferredProj)
+curbs <- st_transform(curbs, crs = preferredProj) 
 
 
 
